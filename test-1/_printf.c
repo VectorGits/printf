@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- * _printf - Produces output according to a format.
- * @format: The format string.
+ * _printf - Provides the output in respect to a format.
+ * @format: String format
  *
- * Return: The number of characters printed (excluding the null byte).
+ * Return: Amount of char printed, null byte is excluded
  */
 int _printf(const char *format, ...)
 {
