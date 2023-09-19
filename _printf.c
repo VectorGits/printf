@@ -2,17 +2,6 @@
 #include <stdio.h>
 
 /**
- * _putchar - A custom function to write a character to stdout.
- * @c: The character to write.
- *
- * Return: The number of characters written (always 1).
- */
-int _putchar(char c)
-{
-	return write(1, &c, 1);
-}
-
-/**
  * print_char - Print a character.
  * @args: The va_list of arguments.
  *

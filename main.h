@@ -16,6 +16,11 @@
 
 
 int _printf(const char *format, ...);
+int handle_di(va_list args);
+int print_char(va_list args);
+int print_string(va_list args);
+
+#define BUFF_SIZE 1024
 
 
 #endif /* _MAIN_H_ */
