@@ -21,6 +21,7 @@ typedef struct print
 } print_t;
 
 int _printf(const char *format, ...);
+int handle_di(va_list args);
 
 int print_buf(char *buf, unsigned int nbuf);
 unsigned int handl_buf(char *buf, char c, unsigned int ibuf);

@@ -9,7 +9,7 @@
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	return write(1, &c, 1);
 }
 
 /**
@@ -20,7 +20,7 @@ int _putchar(char c)
  */
 int print_char(va_list args)
 {
-	return (_putchar(va_arg(args, int)));
+	return _putchar(va_arg(args, int));
 }
 
 /**
@@ -44,7 +44,24 @@ int print_string(va_list args)
 		str++;
 	}
 
-	return (char_count);
+	return char_count;
+}
+
+/**
+ * handle_di - Handle the "d" and "i" conversion specifiers.
+ * @args: The va_list of arguments.
+ *
+ * Return: The number of characters printed.
+ */
+int handle_di(va_list args)
+{
+	int num = va_arg(args, int);
+	int char_count = 0;
+
+	/* Assuming your buffer handling code is here */
+	/* You can add code to print 'num' to your buffer or stdout here */
+
+	return char_count;
 }
 
 /**
@@ -69,17 +86,26 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
-			if (*format == 'c')
+			switch (*format)
 			{
-				char_count += print_char(args);
-			}
-			else if (*format == 's')
-			{
-				char_count += print_string(args);
-			}
-			else if (*format == '%')
-			{
-				char_count += _putchar('%');
+				case 'c':
+					char_count += print_char(args);
+					break;
+				case 's':
+					char_count += print_string(args);
+					break;
+				case '%':
+					char_count += _putchar('%');
+					break;
+				case 'd':
+				case 'i':
+					char_count += handle_di(args);
+					break;
+				default:
+					_putchar('%');
+					_putchar(*format);
+					char_count += 2;
+					break;
 			}
 		}
 		format++;
@@ -87,6 +113,6 @@ int _printf(const char *format, ...)
 
 	va_end(args);
 
-	return (char_count);
+	return char_count;
 }
 
