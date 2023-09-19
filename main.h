@@ -14,20 +14,9 @@
  * printer functions for handling different data types.
  */
 
-typedef struct print
-{
-    char *type_arg;
-    int (*f)(va_list, char *, unsigned int *);
-} print_t;
 
 int _printf(const char *format, ...);
-int handle_di(va_list args);
-int _putchar(char c);
-int print_char(va_list args)
 
-int print_buf(char *buf, unsigned int nbuf);
-unsigned int handl_buf(char *buf, char c, unsigned int ibuf);
-int ev_print_func(const char *s, int index);
 
 #endif /* _MAIN_H_ */
 
