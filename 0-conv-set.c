@@ -47,4 +47,3 @@ int handle_di_recursive(int num)
 		return (handle_di_recursive(num / 10) + _putchar('0' + (num % 10)));
 	return (_putchar('0' + num));
 }
-

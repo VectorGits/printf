@@ -34,6 +34,3 @@ int print_string(va_list args)
 
 	return (char_count);
 }
-
-
-

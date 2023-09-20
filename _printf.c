@@ -40,6 +40,7 @@ int _printf(const char *format, ...)
 			{
 				char_count += handle_di(args);
 			}
+		}
 		format++;
 	}
 
@@ -47,4 +48,3 @@ int _printf(const char *format, ...)
 
 	return (char_count);
 }
-
