@@ -6,11 +6,11 @@
 #include <unistd.h>
 
 /**
- * struct print - Structure for printer functions
- * @type_arg: Identifier for the printer function
- * @f: Pointer to a printer function
+ * struct print - printer functions  structure
+ * @type_arg: printer function identifier
+ * @f: printer function pointer
  *
- * Description: This structure holds pointers to various
+ * Description: This particular structure handles pointers to different
  * printer functions for handling different data types.
  */
 
