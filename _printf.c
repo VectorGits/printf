@@ -36,12 +36,16 @@ int _printf(const char *format, ...)
 			{
 				char_count += _putchar('%');
 			}
+			else if (*format == 'd' || *format == 'i')
+			{
+				char_count += handle_di(args);
+			}
 		}
 		format++;
 	}
 
 	va_end(args);
 
-	return char_count;
+	return (char_count);
 }
 
