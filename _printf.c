@@ -40,11 +40,6 @@ int _printf(const char *format, ...)
 			{
 				char_count += handle_di(args);
 			}
-			else if (*format == 'b')
-			{
-				char_count += print_binary(args, buffer, 0, 0, 0, 0);
-			}
-		}
 		format++;
 	}
 

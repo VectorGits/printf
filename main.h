@@ -22,9 +22,6 @@ int handle_di(va_list args);
 int handle_di_recursive(int num);
 int print_char(va_list args);
 int print_string(va_list args);
-int print_binary(va_list types, char buffer[],
-                 int flags, int width, int precision, int size);
-
 
 #define BUFF_SIZE 1024
 
