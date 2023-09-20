@@ -1,2 +1,3 @@
 #ignore main.c file
 *main.c
+*.out
