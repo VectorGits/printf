@@ -22,7 +22,7 @@ int handle_di(va_list args);
 int handle_di_recursive(int num);
 int print_char(va_list args);
 int print_string(va_list args);
-
+int print_unsigned(va_list args, char buffer[]);
 #define BUFF_SIZE 1024
 
 
