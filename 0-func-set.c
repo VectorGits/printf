@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_char - Print a character.
  * @args: The va_list of arguments.
@@ -6,7 +8,7 @@
  */
 int print_char(va_list args)
 {
-	return _putchar(va_arg(args, int));
+	return (_putchar(va_arg(args, int)));
 }
 
 /**
@@ -30,5 +32,5 @@ int print_string(va_list args)
 		str++;
 	}
 
-	return char_count;
+	return (char_count);
 }
